@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EPAM Registration-ValidationTASK</title>
+    <link href="styles.css" rel="stylesheet">
+	<script>
+	function myfun()
+	{
+	   var user = document.getElementById('uname').value;
+	   var pass = document.getElementById('password').value;
+	   var confirmpass = document.getElementById('conPassword').value;
+	   var mobileNumber = document.getElementById('mobileno').value;
+	   var emails = document.getElementById('email').value;
+	   var date = document.getElementById('DOB').value;
+	   
+	   
+	   var regx=/^(0?[1-9]|1[0-2])[\/](0?[1-9]|[1-2][0-9]|3[01])[\/]\d{4}$/;      ;
+
+       if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+            if (date == null || date == "" || !regx.test(date)) {
+             document.getElementById('datespan').innerHTML =" ** valid date";
+             return false;
+             }
+            else {
+                 return true;
+            }
+            
+
+
+			if(pass == ""){
+				document.getElementById('passwordspan').innerHTML =" ** Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwordspan').innerHTML =" ** Passwords lenght must be between  5 and 20";
+				return false;	
+			}
+
+
+			if(pass!=confirmpass){
+				document.getElementById('conpass').innerHTML =" ** Password does not match the confirm password";
+				return false;
+			}
+
+
+
+			if(confirmpass == ""){
+				document.getElementById('conpass').innerHTML =" ** Please fill the confirmpassword field";
+				return false;
+			}
+
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobilespan').innerHTML =" ** Please fill the mobile NUmber field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobilespan').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobilespan').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailspan').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailspan').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailspan').innerHTML =" ** . Invalid Position";
+				return false;
+			}
+	}
+	</script>
+</head>
+<body>
+<div id="credentialSection">
+<div class="div-head">
+<img src="./images/convocationHat.png" class="logo" alt="logo">
+<p>EPAM REGISTRATION</p>			
+</div>
+<div id="credentials-div">
+<form action"#" id="signUp-form" >
+<input type="text" placeholder="username" required class="input-field" id="uname" >
+<br>
+<span id="username" style="color:red;"></span>
+<br>
+<input type="email" placeholder="mail@example.com" required class="input-field" id="email" >
+<br>
+<span id="emailspan" style="color:red;"></span>
+<br>
+<input type="password" placeholder="password" required class="input-field" id="password">
+<br>
+<span id="passwordspan" style="color:red;"></span>
+<br>
+<input type="password" placeholder="confirmpassword" required class="input-field" id="conPassword">
+<br>
+<span id="conpass" style="color:red;"></span>
+<br>
+<input type="text" placeholder="telephone-no" required class="input-field" id="mobileno" >
+<br>
+<span id="mobilespan" style="color:red;"></span>
+<br>
+<input type="text" placeholder="date-of-Birth" required class="input-field" id="DOB" name="dob" >
+<br>
+<span id="datespan" style="color:red;"></span>
+<br>
+<input type="checkbox" class="checkbox-class" id="check-box" required>I Accept all the Terms &amp; conditions.
+<input type="submit" onclick="myfun()" class="btn" value="submit" style="background-color: Dodgerblue; border-color: deepskyblue;">
+<br>
+</form>
+
+</div>
+<p id="anil"> </p>
+</body>
+</html>
+

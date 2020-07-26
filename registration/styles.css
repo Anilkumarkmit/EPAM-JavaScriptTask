@@ -1,0 +1,110 @@
+#credentialSection {
+    margin: 60px auto 30px;
+    height: 60%;
+    width: 30%;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 5px  rgba(0,0,0,120);
+    border-radius: 5px;
+	justify-content: center;
+}
+
+.div-head {
+    height: fit-content;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #0073e6;
+}
+
+.div-head p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    color: white;
+}
+
+.div-head img {
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+#signUp-form {
+    padding-top: 1px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.name{
+	display:inline-flex;
+    
+}
+.name .input-field{
+	width: 35%;
+
+}
+
+.input-field {
+    border-radius: 5px;
+    width: 85%;
+    padding: 7px 10px;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+}
+#email {
+    background-image: url('images/mail.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 330px;
+}
+ #password {
+     background-image: url('images/password.png');
+     background-size: 15px;
+     background-repeat: no-repeat;
+     background-position: 330px;
+ }
+ #conPassword {
+     background-image: url('images/password.png');
+     background-size: 15px;
+     background-repeat: no-repeat;
+     background-position: 330px;
+ }
+ #mobileno {
+    background-image: url('images/tele.jpg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 330px;
+}
+
+ #DOB {
+    background-image: url('images/calendar.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 330px;
+}
+.checkbox-class{
+	padding: 7px 10px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.btn {
+     border-radius: 5px;
+     width: 90%;
+     padding: 7px 10px;
+	 cursor: pointer;
+     margin-top: 15px;
+     margin-left: auto;
+     margin-right: auto;
+	 margin-bottom:10px;
+	 height:40px;
+     font-family: "JetBrains Mono", serif;
+     font-weight: 1000;
+     font-size: 20px;
+     display: inline-block;
+     color: white;
+ }
+	
+	
